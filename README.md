@@ -1,127 +1,36 @@
-<h1 align="center">Welcome and feel free to use!</h1>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## 💻 Project
+## Getting Started
 
-Well, since I have to create a lot of new projects with pretty much the same configs, I decided to save a bit of my time.
+First, run the development server:
 
-If you are starting and don't know how to create a project on your own and config eslint, prettier, editorconfig I highly recommend you to give a try. But don't forget, look it up to know what's going on here. 😉
-
-The project was initialised using [Create React App](https://reactjs.org/docs/create-a-new-react-app.html).
-
-## 🤔 Benefits of using Prettier and ESLint
-
-If you have set up Prettier, you can configure it to format your file on saving it. That way, you never need to worry about your code formatting anymore. Since Prettier is highly opinionated, you can do only minor configurations.
-
-## 🚀 Technologies
-
-The project was mainly developed with the following technologies:
-
-```
-"dependencies": {
-  "normalize.css": "^8.0.1",
-  "react": "^17.0.1",
-  "react-icons": "^4.1.0",
-  "styled-components": "^5.2.1",
-  "typescript": "^4.0.3",
-},
-
-"devDependencies": {
-  "@types/styled-components": "^5.1.7",
-  "@typescript-eslint/eslint-plugin": "^4.10.0",
-  "@typescript-eslint/parser": "^4.10.0",
-  "eslint": "^7.15.0",
-  "eslint-config-airbnb": "^18.2.1",
-  "eslint-config-prettier": "^7.0.0",
-  "eslint-import-resolver-typescript": "^2.3.0",
-  "eslint-plugin-import": "^2.22.1",
-  "eslint-plugin-jsx-a11y": "^6.4.1",
-  "eslint-plugin-prettier": "^3.3.0",
-  "eslint-plugin-react": "^7.21.5",
-  "eslint-plugin-react-hooks": "^4",
-  "prettier": "^2.2.1"
-}
-
-VS Code with EditorConfig and ESLint
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 🗂 Folders
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```
-├── public
-│   ├── ...
-├── src
-│   ├── App.tsx
-│   ├── components
-│   ├── index.tsx
-│   ├── pages
-│   │   └── Home
-│   │       ├── index.tsx
-│   │       └── styles.ts
-│   ├── react-app-env.d.ts
-│   ├── reportWebVitals.ts
-│   ├── setupTests.ts
-│   └── styles
-│       ├── GlobalStyles.ts
-│       └── theme
-│           ├── defaultTheme.ts
-│           └── styled.d.ts
-├── .editorconfig
-├── .eslintcache
-├── .eslintignore
-├── .eslintrc.json
-├── .gitignore
-├── LICENSE
-├── README.md
-├── package.json
-├── prettier.config.js
-├── tsconfig.json
-└── yarn.lock
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 🧩 You will need
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
-- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig).
+## Learn More
 
-## 📚 Creating a repository from a template
+To learn more about Next.js, take a look at the following resources:
 
-- On GitHub, navigate to the main page of the repository.
-- Above the file list, click Use this template.
-- Use the Owner drop-down menu, and select the account you want to own the repository.
-- Type a name for your repository, and an optional description.
-- Choose a repository visibility.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 📚 How to clone and use
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-To clone and run this application, we will need NodeJS + Yarn (or NPM) installed on computer.
+## Deploy on Vercel
 
-After this clone the repository, from our command line:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-```
-# Clone this repository
-$ git clone https://github.com/LucasReinaldo/react-typescript-eslint-prettier-boilerplate.git
-
-# Go into the repository
-$ cd react-typescript-eslint-prettier-boilerplate
-
-# Install dependencies
-$ yarn install
-
-# Run the app
-$ yarn start
-```
-
-## 🧠 Need an upgrade?
-
-Check it out: [Yarn Upgrade](https://classic.yarnpkg.com/en/docs/cli/upgrade/).
-
-Upgrades packages to their latest version based on the specified range.
-
-```
-$ yarn upgrade
-```
-
-## 📖 License
-
-This project is under MIT license [LICENSE](LICENSE.md) to know more.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
