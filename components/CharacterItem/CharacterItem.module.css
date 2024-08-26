@@ -1,0 +1,17 @@
+.card {
+	width: 100%;
+	height: 119px;
+
+	& span {
+		height: 100% !important;
+	}
+}
+
+.description {
+	text-wrap: nowrap;
+
+	& div {
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+}
