@@ -18,7 +18,6 @@ export default function CharacterPage(props: CharacterPageProps) {
         <Flex vertical gap={12}>
           <Row gutter={16} justify="center" align="middle">
             <Col span={16}>
-              <CharacterCardSkeleton />
               <Suspense
                 key={`${characterId}:character`}
                 fallback={<CharacterCardSkeleton />}
