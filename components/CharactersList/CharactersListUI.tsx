@@ -1,19 +1,19 @@
 'use client';
 
-import React from "react";
-import { Row, Space } from "antd";
-import { FrownOutlined } from '@ant-design/icons'
+import React from 'react';
+import { Row, Space } from 'antd';
+import { FrownOutlined } from '@ant-design/icons';
 
 import { Character } from '@/data';
-import { CharacterItem } from "../CharacterItem";
+import { CharacterItem } from '../CharacterItem';
 
 import styles from './CharactersList.module.css';
 
 type CharactersListUIProps = {
-  data: Character[]
-}
+  data: Character[];
+};
 
-export const CharactersListUI = (props: CharactersListUIProps) => {
+export function CharactersListUI(props: CharactersListUIProps) {
   const { data } = props;
 
   if (!data.length) {
@@ -22,14 +22,19 @@ export const CharactersListUI = (props: CharactersListUIProps) => {
         <FrownOutlined />
         <Space />
         <div className={styles.notFoundText}>
-          nothing found... <br />sorry...
+          nothing found...
+          {' '}
+          <br />
+          sorry...
         </div>
       </div>
-    )
+    );
   }
   return (
     <Row wrap gutter={[12, 12]}>
-      {data.map((item) => <CharacterItem {...item} key={`${item.url}`} />)}
+      {data.map((item) => (
+        <CharacterItem item={item} key={`${item.url}`} />
+      ))}
     </Row>
-  )
+  );
 }

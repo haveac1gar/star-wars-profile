@@ -1,14 +1,20 @@
 import { Suspense } from 'react';
-import { Search, MainLayout, CharactersListSkeleton, CharactersList, Pagination, PaginationSkeleton } from '@/components'
-
 import { Col, Flex, Row } from 'antd';
+import {
+  Search,
+  MainLayout,
+  CharactersListSkeleton,
+  CharactersList,
+  Pagination,
+  PaginationSkeleton,
+} from '@/components';
 
 type HomePageProps = {
-  searchParams?: {
+  searchParams: {
     query?: string;
     page?: string;
   };
-}
+};
 
 export default function Home(props: HomePageProps) {
   const { searchParams } = props;
@@ -17,14 +23,14 @@ export default function Home(props: HomePageProps) {
 
   return (
     <MainLayout
-      ContentComponent={
+      ContentComponent={(
         <Flex vertical gap={12}>
-          <Row gutter={16} justify="center" align='middle'>
+          <Row gutter={16} justify="center" align="middle">
             <Col span={16}>
               <Search />
             </Col>
           </Row>
-          <Row gutter={16} justify="center" align='middle' wrap>
+          <Row gutter={16} justify="center" align="middle" wrap>
             <Col span={16}>
               <Suspense
                 key={`${query}:${page}:list`}
@@ -35,15 +41,12 @@ export default function Home(props: HomePageProps) {
             </Col>
           </Row>
         </Flex>
-      }
-      FooterComponent={
-        <Suspense
-          key={`${query}:pagination`}
-          fallback={<PaginationSkeleton />}
-        >
+      )}
+      FooterComponent={(
+        <Suspense key={`${query}:pagination`} fallback={<PaginationSkeleton />}>
           <Pagination query={query} page={page} />
         </Suspense>
-        }
+      )}
     />
   );
 }

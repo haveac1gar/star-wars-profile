@@ -1,34 +1,34 @@
 import { Suspense } from 'react';
-import { MainLayout, CharacterCard, CharacterCardSkeleton } from '@/components'
-
 import { Col, Flex, Row } from 'antd';
+import { MainLayout, CharacterCard, CharacterCardSkeleton } from '@/components';
 
 type CharacterPageProps = {
   params: {
     id: string;
   };
-}
+};
 
 export default function CharacterPage(props: CharacterPageProps) {
   const { params } = props;
-	const characterId = Number(params.id);
+  const characterId = Number(params.id);
 
   return (
     <MainLayout
-      ContentComponent={
+      ContentComponent={(
         <Flex vertical gap={12}>
-          <Row gutter={16} justify="center" align='middle'>
+          <Row gutter={16} justify="center" align="middle">
             <Col span={16}>
+              <CharacterCardSkeleton />
               <Suspense
                 key={`${characterId}:character`}
                 fallback={<CharacterCardSkeleton />}
               >
-								<CharacterCard id={characterId} />
+                <CharacterCard id={characterId} />
               </Suspense>
             </Col>
           </Row>
         </Flex>
-      }
+      )}
     />
   );
 }

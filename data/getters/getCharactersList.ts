@@ -1,3 +1,4 @@
-import { fetchCharactersList } from "../methods";
+import { fetchCharactersList } from '../methods';
 
-export const getCharactersList = (page: number, query: string) => fetchCharactersList({ page, query });
+export const getCharactersList = (page: number, query: string) =>
+	fetchCharactersList({ page, query });

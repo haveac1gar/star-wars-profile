@@ -1,12 +1,12 @@
 .searchWrapper {
-	width: 100%;
+  width: 100%;
 
-	& button {
-		background: #618985 !important;
-	}
+  & button {
+    background: #618985 !important;
+  }
 
-	& span:has(input:focus),
-	& span:has(input:hover) {
-		border-color: #618985 !important;
-	}
+  & span:has(input:focus),
+  & span:has(input:hover) {
+    border-color: #618985 !important;
+  }
 }

@@ -1,3 +1,15 @@
 .text {
-	margin: 0 !important;
+  margin: 0 !important;
+}
+
+.desc {
+  & table {
+    width: 100% !important;
+    table-layout: fixed !important;
+  }
+}
+
+.skeleton {
+  height: 740px !important;
+  max-height: calc(100vh - 88px) !important;
 }

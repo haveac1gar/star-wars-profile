@@ -1,17 +1,17 @@
 .notFoundWrapper {
-	padding: 192px 0;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 16px;
-	font-size: 96px;
-	color: #618985;
+  padding: 192px 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 96px;
+  color: #618985;
 }
 
 .notFoundText {
-	font-size: 16px;
-	text-align: center;
+  font-size: 16px;
+  text-align: center;
 }
