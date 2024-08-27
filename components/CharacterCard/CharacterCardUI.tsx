@@ -59,7 +59,7 @@ export const CharacterCardUI = memo((props: CharacterCardUIProps) => {
       {
         key: '8',
         label: 'Home',
-        children: <EditableTagInput defaultValue={[data.homeworld.name]} />,
+        children: <EditableInput defaultValue={data.homeworld.name} />,
       },
     ],
     [data],
@@ -69,16 +69,16 @@ export const CharacterCardUI = memo((props: CharacterCardUIProps) => {
     () => [
       {
         key: '1',
-        label: 'Vehicles',
+        label: 'Starships',
         children: (
-          <EditableTagInput defaultValue={data.vehicles.map((v) => v.name)} />
+          <EditableTagInput defaultValue={data.starships.map((v) => v.name)} />
         ),
       },
       {
         key: '2',
-        label: 'Starships',
+        label: 'Vehicles',
         children: (
-          <EditableTagInput defaultValue={data.starships.map((v) => v.name)} />
+          <EditableTagInput defaultValue={data.vehicles.map((v) => v.name)} />
         ),
       },
     ],
@@ -130,6 +130,7 @@ export const CharacterCardUI = memo((props: CharacterCardUIProps) => {
       <Descriptions
         className={styles.desc}
         title="Appearance"
+        layout="vertical"
         column={2}
         bordered
         size="middle"
