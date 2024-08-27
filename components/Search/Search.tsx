@@ -1,12 +1,11 @@
 'use client';
 
-import React, { useCallback, useMemo } from "react";
+import React, { ChangeEvent, useCallback, useMemo } from "react";
+import { useDebouncedCallback } from "use-debounce";
 import { Input } from 'antd';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
 import styles from './Search.module.css';
-
-const { Search: AntSearch } = Input;
 
 export const Search = () => {
 	const searchParams = useSearchParams();
@@ -14,24 +13,27 @@ export const Search = () => {
 	const { replace } = useRouter();
 
 	const defaultValue = useMemo(() => searchParams.get('query')?.toString(), [searchParams])
-	const onSearch = useCallback((searchText: string) => {
+	const handleQueryChange = useDebouncedCallback((query: string) => {
 		const params = new URLSearchParams(searchParams);
-		if (searchText) {
-			params.set('query', searchText);
+		if (query) {
+			params.set('query', query);
 		} else {
 			params.delete('query');
 		}
 
 		params.set('page', '1')
 		replace(`${pathname}?${params.toString()}`);
-	}, [searchParams, pathname, replace])
+	}, 200)
+	const onChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+		handleQueryChange(event.target.value)
+	}, [handleQueryChange])
 
 	return (
 		<div className={styles.searchWrapper}>
-			<AntSearch
-				placeholder="Type Star Wars character here and press Enter"
-				onSearch={onSearch}
-				enterButton
+			<Input
+				placeholder="Type Star Wars character here..."
+				onChange={onChange}
+				allowClear
 				defaultValue={defaultValue}
 				size="large"
 			/>

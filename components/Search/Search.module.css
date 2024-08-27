@@ -5,7 +5,8 @@
 		background: #618985 !important;
 	}
 
-	& input:focus {
+	& span:has(input:focus),
+	& span:has(input:hover) {
 		border-color: #618985 !important;
 	}
 }

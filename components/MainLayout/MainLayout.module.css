@@ -9,8 +9,9 @@
 	width: 100%;
 	background-color: #414535 !important;
 	text-transform: uppercase;
-	letter-spacing: 1em;
+	letter-spacing: .5em;
 	font-weight: 800;
+	cursor: pointer;
 }
 .headerRow {
 	height: 100%;

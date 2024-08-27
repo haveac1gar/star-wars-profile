@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Card, Col, Skeleton } from "antd";
+import { Col, Skeleton } from "antd";
 
 import styles from './CharacterItem.module.css';
 

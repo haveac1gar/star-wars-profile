@@ -1,0 +1,45 @@
+.input {
+	left: -12px;
+	width: calc(100% + 24px) !important;
+
+	&:hover,
+	&:focus,
+	&:focus-within {
+		border-color: #96bbbb !important;
+	}
+
+	& :global(.ant-input-number-suffix) {
+		color: #96bbbb !important;
+		transition: all ease .2s;
+
+		&:hover {
+			color: #618985 !important;
+			cursor: pointer;
+		}
+	}
+}
+
+.input:global(.ant-input-number-affix-wrapper-focused) {
+	border-color: #96bbbb !important;
+}
+
+.input:global(.ant-input-nubmer-disabled) {
+	cursor: default !important;
+	background-color: transparent !important;
+	border-color: transparent !important;
+
+	& :global(.ant-input-number) {
+		cursor: default !important;
+		color: rgba(0, 0, 0, 0.88) !important;
+	}
+
+	& :global(.ant-input-number-suffix) {
+		color: #618985 !important;
+		transition: all ease .2s;
+
+		&:hover {
+			color: #96bbbb !important;
+			cursor: pointer;
+		}
+	}
+}
